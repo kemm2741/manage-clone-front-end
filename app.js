@@ -10,7 +10,6 @@ hamburger.addEventListener("click", () => {
   overlay.classList.toggle("overlay-active");
   hamburger.style.display = "none";
   closeBtn.style.display = "block";
-  body.classList.toggle("disable-scroll");
 });
 
 overlay.addEventListener("click", () => {
@@ -18,5 +17,4 @@ overlay.addEventListener("click", () => {
   hamburgerNavlist.classList.remove("active");
   hamburger.style.display = "block";
   closeBtn.style.display = "none";
-  body.classList.remove("disable-scroll");
 });
