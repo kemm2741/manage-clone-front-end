@@ -1,5 +1,6 @@
 const hamburger = document.getElementById("hamburger");
 const closeBtn = document.getElementById("close");
+const body = document.querySelector("body");
 
 const hamburgerNavlist = document.querySelector(".hamburger-navlist");
 const overlay = document.getElementById("overlay");
@@ -9,6 +10,7 @@ hamburger.addEventListener("click", () => {
   overlay.classList.toggle("overlay-active");
   hamburger.style.display = "none";
   closeBtn.style.display = "block";
+  body.classList.toggle("disable-scroll");
 });
 
 overlay.addEventListener("click", () => {
@@ -16,4 +18,5 @@ overlay.addEventListener("click", () => {
   hamburgerNavlist.classList.remove("active");
   hamburger.style.display = "block";
   closeBtn.style.display = "none";
+  body.classList.remove("disable-scroll");
 });
